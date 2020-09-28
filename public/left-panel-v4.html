@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       <style type="text/css">
+        /* Top nav bar background color */
+          .nav-bg{background: #3366FF;}
+        /*end  Top nav bar background color */  
+        
+        /* for alignment propose */  
+         .width100{ width: 100% }   
+         .mt16px { margin-top: 16px; } 
+         .pb24px { padding-bottom: 16px !important; } 
+         .p-0{ padding: 0 }
+         .m-0{ margin:0; }
+        /* end for alignment propose */ 
+
+
+        /* ------------------------------------------------------------------------- */
+         /* Primary blue button */
+            /* background color and border radiud */
+             .primary-button{ background-color: #3366FF !important;border-radius: 2px !important; }
+            /* end background color and border radiud */
+             /* text color */ 
+            .primary-button-text-style{color: #fff !important; font-weight: 400; font-size: 16px;}
+            /* end text color */
+         /* end Primary blue button */
+
+         /* Primary button text size and text color */
+         .button-label-font-size{ font-size: 14px; text-transform: capitalize; color: #000} 
+         /*end  Primary button text size and text color */
+         
+
+         /* Secondary light grey color button */
+         .secondary-button{ background-color: #F9F9F9 !important;border-radius: 2px !important; }
+            /* text color */
+            .secondary-button-text-style{color: #222 !important; font-weight: 400; font-size: 16px;}
+             /* end text color */
+         /* Secondary light grey color button */
+
+        /* ------------------------------------------------------------------------- */ 
+
+
+        /* ------------------------------------------------------------------------- */
+          /* barcode data table*/
+          /* overwrite the data table header for height and fontsize. I used Id (#bar-code-table) based on this
+          id below class will works */
+
+            /* data table header */         
+            #bar-code-table .mdc-data-table__header-cell{ height: 48px; font-size: 16px;  } 
+            /* end data table header */
+
+            /* data table row */ 
+            #bar-code-table .mdc-data-table__cell{ height: 48px; font-size: 16px;} 
+            /* end data table row */ 
+
+            /* overwrite the data table header bg color */
+            .table-row-header{ background: #F2F2F2 }
+           /* end overwrite the data table header bg color */
+
+           /* we remove the default table border bottom */
+          .border-bottom-none{ border: none !important; }
+          /* end we remove the default table border bottom */  
+
+          /*end overwrite the data table header for height and fontsize. I used Id (#bar-code-table) based on this
+          id below class will works  */
+          /* end barcode data table*/
+         /* ------------------------------------------------------------------------- */ 
+
+
+         /* ------------------------------------------------------------------------- */ 
+         /* bar code search box height adjustment */
+          .input-box-height {     height: 40px; }  
+          /* end Inout box height adjustment */
+
+          /* bar code search Icon color adjustment */
+          .bar-code-ic-adj{padding-top: 8px; color: #aaa}
+          /* bar code search Icon */
+          
+          /* bar code search placehold padding left alignment */
+          .pl-32{padding-left: 32px;}
+          /* end bar code search placehold padding left alignment */
+          /* ------------------------------------------------------------------------- */ 
+
+          /* placeholder text color and inputbox border color */
+          :root { --mdc-theme-primary: #3366FF;} 
+          /* end placeholder text color and inputbox border color */
+       </style>
+       
+    </head>
+   
+   <body style="padding: 0; margin: 0; background:#f2f2f2">
+
+    <header class=" mdc-top-app-bar nav-bg">
+      <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button><span class="mdc-top-app-bar__title">Sample Layout</span> 
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            
+          </section>
+      </div>
+    </header>
+
+    <!-- container -->
+      <div style="padding-top: 60px;">
+        <div class="mdc-layout-grid" style="">
+          <div class="mdc-layout-grid__inner">
+
+             <div class="mdc-layout-grid__cell--span-3" style="background: #fff; padding: 16px;">
+                  <h6 class="mdc-typography--subtitle2 p-0 m-0 mb-3 pb24px">Code search</h6>
+
+
+
+                  <div class="mdc-text-field text-field demo-text-field-outlined-shaped mdc-text-field--outlined width100 input-box-height"><i class="material-icons bar-code-ic-adj" style="">
+horizontal_split
+</i><input type="text" id="text-field-outlined-shape-one" class="mdc-text-field__input" aria-describedby="text-field-outlined-shape-one-helper-text"><div class="mdc-notched-outline mdc-notched-outline--upgraded"><div class="mdc-notched-outline__leading"></div><div class="mdc-notched-outline__notch" style=""><label class="mdc-floating-label pl-32" for="text-field-outlined-shape-one">Standard</label></div><div class="mdc-notched-outline__trailing"></div></div></div>
+
+                  <div class="mdc-layout-grid__inner mt16px" style="">
+                      <div class="mdc-layout-grid__cell--span-6 text-center mt16">
+                         <button class="mdc-button mdc-button--outlined width100 primary-button" >
+                            <div class="mdc-button__ripple "></div>
+                            <span class="mdc-button__label button-label-font-size primary-button-text-style"> New</span>
+                         </button>
+                      </div> 
+                      <div class="mdc-layout-grid__cell--span-6 text-center mt16">
+                        <button class="mdc-button mdc-button--outlined width100 secondary-button" >
+                            <div class="mdc-button__ripple button-border-color border-bottom-none "></div>
+                            <span class="mdc-button__label button-label-font-size secondary-button-text-style"> Clear</span>
+                         </button>    
+                      </div> 
+                  </div>  
+
+
+                  <div class="mt16px">
+                    <div class="mdc-data-table">
+                      <div class="mdc-data-table__table-container" id="bar-code-table">
+                        <table class="mdc-data-table__table width100 " aria-label="Dessert calories" >
+                          <thead>
+                            <tr class="mdc-data-table__header-row table-row-header">
+                              <th class="mdc-data-table__header-cell" role="columnheader" scope="col" >Id</th>
+                              <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col" style="width: 50%; text-align: left;">Name</th>
+
+                            </tr>
+                          </thead>
+                          <tbody class="mdc-data-table__content ">
+                            <tr class="mdc-data-table__row border-bottom-none">
+                              <td class="mdc-data-table__cell" scope="row" style="">0001</td>
+                              <td class="mdc-data-table__cell" style="">Veera</td>
+                            </tr>
+                            <tr class="mdc-data-table__row border-bottom-none">
+                              <td class="mdc-data-table__cell" scope="row">0002</td>
+                              <td class="mdc-data-table__cell">Suren</td>
+                            </tr>
+                            <tr class="mdc-data-table__row border-bottom-none">
+                              <td class="mdc-data-table__cell" scope="row">0003</td>
+                              <td class="mdc-data-table__cell">Jai</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+             </div>
+
+             <div class="mdc-layout-grid__cell--span-9">
+              2
+             </div>
+          </div> 
+        </div>   
+      </div>  
+
+    <!-- end container -->
+
+
+<!-- Required Material Web JavaScript library --> <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> <!-- Instantiate single textfield component rendered in the document --> <script> mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field')); </script>
+
+   </body>
+</html>
