@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <style type="text/css">
+      .nav-bg {
+        background: #3366ff;
+      }
+      .width100 {
+        width: 100%;
+      }
+      .mt16px {
+        margin-top: 16px;
+      }
+      .mb24px {
+        margin-bottom: 24px;
+      }
+      .pb24px {
+        padding-bottom: 16px !important;
+      }
+      .button-border-color {
+        border: 1px solid #000 !important;
+      }
+      .button-label-font-size {
+        font-size: 14px;
+        text-transform: capitalize;
+        color: #000;
+      }
+      .table-row-header {
+        background: #f2f2f2;
+      }
+      .border-bottom-none {
+        border: none !important;
+      }
+      .border-none {
+        border: none !important;
+      }
+      .p-0 {
+        padding: 0;
+      }
+      .m-0 {
+        margin: 0;
+      }
+      .p-16 {
+        padding: 16px;
+      }
+      .pb-16 {
+        padding-bottom: 16px;
+      }
+      .pb-8 {
+        padding-bottom: 8px;
+      }
+      .m-0 {
+        margin: 0;
+      }
+      .mb-3 {
+        margin-bottom: 3px;
+      }
+      .primary-button {
+        background-color: #3366ff !important;
+        border-radius: 2px !important;
+      }
+      .primary-button-text-style {
+        color: #fff !important;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      .secondary-button {
+        background-color: #f9f9f9 !important;
+        border-radius: 2px !important;
+      }
+      .secondary-button-text-style {
+        color: #222 !important;
+        font-weight: 400;
+        font-size: 16px;
+      }
+      #bar-code-table .mdc-data-table__cell {
+        height: 48px;
+        font-size: 16px;
+      }
+      #bar-code-table .mdc-data-table__header-cell {
+        height: 48px;
+        font-size: 16px;
+      }
+      .input-box-height {
+        height: 40px;
+      }
+      .bar-code-ic-adj {
+        padding-top: 8px;
+        color: #aaa;
+      }
+      .pl-32 {
+        padding-left: 32px;
+      }
+      .remove-table-border{
+        border:none;
+      }
+      .table-row-col-adj td{
+        padding-top: 4px;
+        padding-bottom: 4px;
+        height: 30px !important; font-size: 14px !important
+      }
+      .p-1{
+        padding: 8px
+      }
+      .pl-2{
+        padding: 16px
+      }
+      .text-color-white{
+        color: #fff
+      }
+      .text-color-secondary{
+        color: rgba(0,0,0,.50);
+      }
+      
+      .pl-0{
+        padding-left: 0
+      }
+      
+      .info-grid{
+        padding: 5px; font-family: roboto; line-height: 21px; font-size: 14px;
+      }
+      .mt-8{
+        margin-top: 8px
+      }
+      .card-bg{
+        background: #fff; padding: 16px;
+      }
+
+     /* 1 st View */
+     .text-color-primary{
+        color: #3366ff
+      }
+     .text-header-bg {background: #3366FF;} 
+     .border-bottom-1{
+        border-bottom: 1px solid #ccc
+      }
+      .p-8{
+        padding: 8px
+      }
+      .pl-16{
+        padding-left: 16px
+      }
+
+
+      :root {
+        --mdc-theme-primary: #3366ff;
+      }
+    </style>
+  </head>
+
+  <body style="padding: 0; margin: 0; background: #f2f2f2">
+    <header class="mdc-top-app-bar nav-bg">
+      <div class="mdc-top-app-bar__row">
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+        >
+          <button
+            class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded"
+          >
+            menu</button
+          ><span class="mdc-top-app-bar__title">Sample Layout</span>
+        </section>
+        <section
+          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end"
+        ></section>
+      </div>
+    </header>
+
+    <!-- container -->
+    <div style="padding-top: 60px">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div
+            class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone"
+            style="background: #fff; padding: 16px"
+          >
+            <h6 class="mdc-typography--subtitle2 p-0 m-0 mb-3 pb24px">
+              Code search
+            </h6>
+
+
+
+            <div class="inline-text-field-container">
+
+            <div
+              class="mdc-text-field text-field demo-text-field-outlined-shaped mdc-text-field--outlined width100 input-box-height mdc-text-field--invalid"
+            >
+
+              <i class="material-icons bar-code-ic-adj" style="">
+                horizontal_split </i
+              ><input
+                type="text"
+                id="text-field-outlined-shape-one"
+                class="mdc-text-field__input"
+                aria-describedby="text-field-outlined-shape-one-helper-text"
+              />
+              <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                <div class="mdc-notched-outline__leading"></div>
+                <div class="mdc-notched-outline__notch" style="">
+                  <label
+                    class="mdc-floating-label pl-32"
+                    for="text-field-outlined-shape-one"
+                    >Standard</label
+                  >
+                </div>
+                <div class="mdc-notched-outline__trailing"></div>
+              </div>
+            </div>
+
+            <div class="mdc-text-field-helper-line">
+               <div class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent mdc-text-field-helper-text--validation-msg" role="alert"><!---->Error message<!----></div>
+            </div>
+
+
+          </div>
+
+
+
+            <div class="mdc-layout-grid__inner mt16px" style="">
+              <div
+                class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone text-center"
+              >
+                <button
+                  class="mdc-button mdc-button--outlined width100 primary-button"
+                >
+                  <div class="mdc-button__ripple"></div>
+                  <span
+                    class="mdc-button__label button-label-font-size primary-button-text-style"
+                  >
+                    New</span
+                  >
+                </button>
+              </div>
+              <div
+                class="mdc-layout-grid__cell--span-6-desktop mdc-layout-grid__cell--span-4-tablet mdc-layout-grid__cell--span-2-phone text-center"
+              >
+                <button
+                  class="mdc-button mdc-button--outlined width100 secondary-button"
+                >
+                  <div
+                    class="mdc-button__ripple button-border-color border-bottom-none"
+                  ></div>
+                  <span
+                    class="mdc-button__label button-label-font-size secondary-button-text-style"
+                  >
+                    Clear</span
+                  >
+                </button>
+              </div>
+            </div>
+
+            <div class="mt16px">
+              <div class="mdc-data-table ">
+                <div
+                  class="mdc-data-table__table-container"
+                  id="bar-code-table"
+                >
+                  <table
+                    class="mdc-data-table__table width100"
+                    aria-label="Dessert calories"
+                  >
+                    <thead>
+                      <tr class="mdc-data-table__header-row table-row-header">
+                        <th
+                          class="mdc-data-table__header-cell"
+                          role="columnheader"
+                          scope="col"
+                        >
+                          Id
+                        </th>
+                        <th
+                          class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric"
+                          role="columnheader"
+                          scope="col"
+                          style="width: 50%; text-align: left"
+                        >
+                          Name
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="mdc-data-table__content">
+                      <tr class="mdc-data-table__row border-bottom-none">
+                        <td class="mdc-data-table__cell" scope="row" style="">
+                          0001
+                        </td>
+                        <td class="mdc-data-table__cell" style="">Veera</td>
+                      </tr>
+                      <tr class="mdc-data-table__row border-bottom-none">
+                        <td class="mdc-data-table__cell" scope="row">0002</td>
+                        <td class="mdc-data-table__cell">Suren</td>
+                      </tr>
+                      <tr class="mdc-data-table__row border-bottom-none">
+                        <td class="mdc-data-table__cell" scope="row">0003</td>
+                        <td class="mdc-data-table__cell">Jai</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdc-layout-grid__cell--span-9-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone" >
+
+              <div class="text-header-bg">
+                <h6 class="mdc-typography--subtitle2 m-0 mb-2 p-8 pl-16 text-color-white">Batch Vool</h6>
+              </div>
+
+
+              
+            <div class="mt-8 card-bg">
+              <div class="border-bottom-1">
+                <h6 class="mdc-typography--subtitle2 m-0 mb-3">
+                  <span>Vector</span> <span class="text-color-primary">Vool</span>
+                </h6>
+              </div>
+
+            </div>
+
+          
+
+
+          </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end container -->
+
+    <!-- Required Material Web JavaScript library -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <!-- Instantiate single textfield component rendered in the document -->
+    <script>
+      mdc.textField.MDCTextField.attachTo(
+        document.querySelector(".mdc-text-field")
+      );
+    </script>
+  </body>
+</html>
