@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       <style type="text/css">
+          .nav-bg{background: #3366FF;}
+         .width100{ width: 100% }   
+         .mt16px { margin-top: 16px; } 
+         .mb24px { margin-bottom: 24px; } 
+         .pb24px { padding-bottom: 16px !important; } 
+         .button-border-color{ border: 1px solid #000 !important; } 
+         .button-label-font-size{ font-size: 14px; text-transform: capitalize; color: #000} 
+         .table-row-header{ background: #F2F2F2 }
+         .border-bottom-none{ border: none !important; }
+         .border-none{ border: none !important; }
+         .p-0{ padding: 0 }
+         .m-0{ margin:0; }
+         .p-16{ padding: 16px; }
+         .pb-16{ padding-bottom: 16px; }
+         .pb-8{ padding-bottom: 8px; }
+         .m-0{ margin: 0 }
+         .mb-3{ margin-bottom: 3px; }
+         .primary-button{ background-color: #3366FF !important;border-radius: 2px !important; }
+         .primary-button-text-style{color: #fff !important; font-weight: 400; font-size: 16px;}
+         .secondary-button{ background-color: #F9F9F9 !important;border-radius: 2px !important; }
+         .secondary-button-text-style{color: #222 !important; font-weight: 400; font-size: 16px;}
+          #bar-code-table .mdc-data-table__cell{ height: 48px; font-size: 16px;} 
+          #bar-code-table .mdc-data-table__header-cell{ height: 48px; font-size: 16px;  } 
+          .input-box-height {     height: 40px; }  
+          .bar-code-ic-adj{padding-top: 8px; color: #aaa}
+          .pl-32{padding-left: 32px;}
+          :root { --mdc-theme-primary: #3366FF;} 
+          .demo-grid {
+  background-color: #ddd;
+  margin-bottom: 32px;
+}
+
+.demo-cell {
+  box-sizing: border-box;
+  background-color: #666;
+  height: 200px;
+  padding: 8px;
+  color: white;
+
+  font-size: 1.5em;
+}
+
+// MDC Web's default desktop breakpoint
+@media (min-width: 840px) {
+  .demo-grid .mdc-layout-grid__inner {
+    justify-content: center;
+  }
+
+  // Specify start position for odd cells
+  // :nth-child(2n+1) is more flexible than :nth-child(odd) as you can use this pattern for 3, 4, etc. cells in a row (3n+1, 4n+1 etc.).
+  .demo-cell:nth-child(2n+1) {
+    grid-column-start: 4;
+  }
+}
+
+       </style>
+       
+    </head>
+   
+   <body style="padding: 0; margin: 0; background:#f2f2f2">
+
+    <header class=" mdc-top-app-bar nav-bg">
+      <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button><span class="mdc-top-app-bar__title">Sample Layout</span> 
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            
+          </section>
+      </div>
+    </header>
+
+
+   <!-- container -->
+      <div style="padding-top: 60px;">
+        <div class="demo-grid mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">1</div>
+    <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">2</div>
+    <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">3</div>
+    <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">4</div>
+    <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">5</div>
+    <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">6</div>
+    <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">7</div>
+    <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">8</div>
+  </div>
+</div>
+
+      </div>  
+
+    <!-- end container -->
+
+
+<!-- Required Material Web JavaScript library --> <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> <!-- Instantiate single textfield component rendered in the document --> <script> mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field')); </script>
+
+   </body>
+</html>

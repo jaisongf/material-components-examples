@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+       <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       <style type="text/css">
+         .nav-bg{background: #3366FF;}
+         /* .demo-text-field-outlined-shaped .mdc-notched-outline .mdc-notched-outline__leading {
+            border-radius: 28px 0 0 28px;width: 28px;  }
+        .demo-text-field-outlined-shaped .mdc-notched-outline .mdc-notched-outline__trailing {
+         border-radius: 0 28px 28px 0;} */
+         .width100{ width: 100% }   
+         .mt16px { margin-top: 16px; } 
+         .button-border-color{ border: 1px solid #000 !important; } 
+         .button-label-font-size{ font-size: 14px; text-transform: capitalize; color: #000} 
+         .table-row-header{ background: #cccccc }
+         .border-bottom-none{ border: none; }
+         .border-none{ border: none; }
+         .p-0{ padding: 0 }
+         .p-16{ padding: 16px; }
+         .m-0{ margin: 0 }
+         .mb-3{ margin-bottom: 3px; }
+         .blue-box { background: #3366FF; color: #fff; padding:4px 16px; }
+         .light-grey-box{ background: #ccc; color: #000; padding:0px 16px; font-size:  }
+         #table-tr-hide .mdc-data-table__row:not(.mdc-data-table__row--selected):hover{ background: none }
+         #table-tr-hide .mdc-data-table__cell{ height: 40px; font-size: 13px;}
+         .bg-white{background: #fff;}
+         .table-first-column-adj{width: 25%;}
+         .table-top-header{margin-left:32px; height: 30px; line-height: 30px;  background: #e4e4e4; }
+         .border-radius-4{-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;}
+         .mdc-text-field--focused{ border-color: red; }
+         :root { --mdc-theme-primary: #FF3366;}
+       </style>
+       
+    </head>
+   
+   <body style="padding: 0; margin: 0; background:#f2f2f2">
+
+    <header class=" mdc-top-app-bar nav-bg">
+      <div class="mdc-top-app-bar__row">
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+            <button class="mdc-icon-button material-icons mdc-top-app-bar__navigation-icon--unbounded">menu</button><span class="mdc-top-app-bar__title pb-16">Sample Layout</span> 
+          </section>
+          <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+            
+          </section>
+      </div>
+    </header>
+
+    <!-- container -->
+      <div style="padding-top: 60px;">
+        <div class="mdc-layout-grid" style="">
+          <div class="mdc-layout-grid__inner">
+
+             <div class="mdc-layout-grid__cell--span-3">
+                  
+                  <div class="mdc-text-field text-field demo-text-field-outlined-shaped mdc-text-field--outlined width100 "><input type="text" id="text-field-outlined-shape-one" class="mdc-text-field__input" aria-describedby="text-field-outlined-shape-one-helper-text"><div class="mdc-notched-outline mdc-notched-outline--upgraded"><div class="mdc-notched-outline__leading"></div><div class="mdc-notched-outline__notch" style=""><label class="mdc-floating-label" for="text-field-outlined-shape-one" style="">Standard</label></div><div class="mdc-notched-outline__trailing"></div></div></div>
+
+                  <div class="mdc-layout-grid__inner mt16px" style="">
+                      <div class="mdc-layout-grid__cell--span-6 text-center mt16">
+                         <button class="mdc-button mdc-button--outlined width100" >
+                            <div class="mdc-button__ripple button-border-color"></div>
+                            <span class="mdc-button__label button-label-font-size"> Button</span>
+                         </button>
+                      </div> 
+                      <div class="mdc-layout-grid__cell--span-6 text-center mt16">
+                        <button class="mdc-button mdc-button--outlined width100" >
+                            <div class="mdc-button__ripple button-border-color"></div>
+                            <span class="mdc-button__label button-label-font-size"> Button</span>
+                         </button>    
+                      </div> 
+                  </div>  
+
+
+                  <div class="mt16px">
+                    <div class="mdc-data-table border-none">
+                      <div class="mdc-data-table__table-container">
+                        <table class="mdc-data-table__table width100 " aria-label="Dessert calories" >
+                          <thead>
+                            <tr class="mdc-data-table__header-row table-row-header">
+                              <th class="mdc-data-table__header-cell" role="columnheader" scope="col" >Id</th>
+                              <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col" style="width: 50%; text-align: left;">Name</th>
+
+                            </tr>
+                          </thead>
+                          <tbody class="mdc-data-table__content ">
+                            <tr class="mdc-data-table__row border-bottom-none">
+                              <td class="mdc-data-table__cell" scope="row" style="">0001</td>
+                              <td class="mdc-data-table__cell" style="">Veera</td>
+                            </tr>
+                            <tr class="mdc-data-table__row border-bottom-none">
+                              <td class="mdc-data-table__cell" scope="row">0002</td>
+                              <td class="mdc-data-table__cell">Suren</td>
+                            </tr>
+                            <tr class="mdc-data-table__row border-bottom-none">
+                              <td class="mdc-data-table__cell" scope="row">0003</td>
+                              <td class="mdc-data-table__cell">Jai</td>
+                            </tr>
+
+
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+             </div>
+
+             <div class="mdc-layout-grid__cell--span-9 bg-white border-radius-4" style="-webkit-box-shadow: 10px 10px 20px -8px rgba(0,0,0,0.17);
+-moz-box-shadow: 10px 10px 20px -8px rgba(0,0,0,0.17);
+box-shadow: 10px 10px 20px -8px rgba(0,0,0,0.17);">
+              <div>
+                <h6 class="mdc-typography--headline6 m-0 mb-3" style="padding:8px 16px; background: #f9f9f9; border-bottom: 1px solid #eee; -webkit-border-top-left-radius: 4px;
+-webkit-border-top-right-radius: 4px;
+-moz-border-radius-topleft: 4px;
+-moz-border-radius-topright: 4px;
+border-top-left-radius: 4px;
+border-top-right-radius: 4px; ">
+                    <div style="padding-bottom: 0; height: 25px; font-weight: 400">    Headline 6 </div>
+                    <div style="font-size: 14px; font-weight: 400; color: #888888">Sub Title 1</div>
+                </h6>
+              </div>
+                        <div class="mdc-layout-grid" style="padding-top: 8px; padding-left:5px;">
+          <div class="mdc-layout-grid__inner">
+
+             <div class="mdc-layout-grid__cell--span-4">
+
+              <!-- <div class="mdc-data-table__header-cell table-top-header" >Sub Title 2</div> -->
+               <div class="mdc-data-table border-none" id="table-tr-hide" style="">
+                      <div class="mdc-data-table__table-container">
+                        <table class="mdc-data-table__table width100" aria-label="Dessert calories" >
+                          <tbody class="mdc-data-table__content ">
+                            <tr class="mdc-data-table__row border-bottom-none">
+                              <td class="mdc-data-table__cell table-first-column-adj">Key</td>
+                              <td class="mdc-data-table__cell">Column</td>
+                            </tr>
+                            <tr class="mdc-data-table__row border-bottom-none" style="">
+                              <td class="mdc-data-table__cell table-first-column-adj" >Key</td>
+                              <td class="mdc-data-table__cell">Column</td>
+
+                            </tr>
+                            <tr class="mdc-data-table__row border-bottom-none ">
+                              <td class="mdc-data-table__cell table-first-column-adj">Key</td>
+                              <td class="mdc-data-table__cell">Column</td>
+
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                      </div>
+                    </div>
+                  </div>
+             </div>
+
+
+
+
+          </div> 
+        </div>   
+      </div>  
+
+    <!-- end container -->
+
+
+<!-- Required Material Web JavaScript library --> <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> <!-- Instantiate single textfield component rendered in the document --> <script> mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field')); </script>
+
+   </body>
+</html>
