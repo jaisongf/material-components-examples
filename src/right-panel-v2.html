@@ -117,35 +117,36 @@
       .pl-2{
         padding: 16px
       }
-      .text-color-white{
-        color: #fff
-      }
-      .text-color-secondary{
-        color: rgba(0,0,0,.50);
-      }
+      
+      
       
       .pl-0{
         padding-left: 0
       }
       
-      .info-grid{
-        padding: 5px; font-family: roboto; line-height: 21px; font-size: 14px;
-      }
-      .mt-8{
-        margin-top: 8px
-      }
-      .card-bg{
-        background: #fff; padding: 16px;
-      }
+      
+      
+      
 
      /* 1 st View */
      .text-color-primary{
         color: #3366ff
       }
+
+      /* text bg color*/
+
      .text-header-bg {background: #3366FF;} 
+     .text-color-white{
+        color: #fff
+      }
+
      .border-bottom-1{
         border-bottom: 1px solid #ccc
       }
+
+      /* card bg*/
+      .card-bg{ background: #fff; padding: 16px; }
+
       .p-8{
         padding: 8px
       }
@@ -154,6 +155,19 @@
       }
       .pl-8 {
         padding-left: 8px;
+      }
+      
+      .mt-8{
+        margin-top: 8px
+      }
+
+      /* grid */
+      .info-grid{
+        padding: 4px; font-family: roboto; line-height: 21px; font-size: 14px;
+        padding-left: 0
+      }
+      .text-color-secondary{
+        color: rgba(0,0,0,.50);
       }
 
 
@@ -330,7 +344,43 @@
                 </h6>
               </div>
 
+
+              <!-- grid 3 column and 2 row-->
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-2-desktop">
+                  <div class="text-color-secondary info-grid">Type</div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4-desktop">
+                   <div class="info-grid">Name</div>
+                </div>
+              </div>
+
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-2-desktop">
+                  <div class="text-color-secondary info-grid">Created</div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-4-desktop">
+                   <div class="info-grid">10-22-2020</div>
+                </div>
+              </div>
+
+              <div class="mdc-layout-grid__inner">
+                <div class="mdc-layout-grid__cell--span-2-desktop">
+                  <div class="text-color-secondary info-grid">Description</div>
+                </div>
+                <div class="mdc-layout-grid__cell--span-10-desktop" >
+                   <div class="info-grid">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
+                </div>
+              </div>
+
+
+
+
+
+
+
             </div>
+
 
           
 
